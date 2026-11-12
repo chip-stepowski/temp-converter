@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"math"
+	"strings"
 )
 
 func roundToOne(val float64) float64 {
-	return math.Round(val*10) / math.Round(10)
+	return math.Round(val*10) / 10
 }
 
 func main() {
@@ -14,12 +15,14 @@ func main() {
 	var i float64
 	var unit string
 
-	fmt.Print("Enter a temperature and a unit of measurement (C or F) or 'q' to quit: ")
+	fmt.Print("Enter a temperature and a unit of measurement (c or f) or 'q' to quit: ")
 	// Scan reads input, each variables type decides when it stops reading. First, it tries to match an integer (i). When it gets to unit, it stops and fills that variable with values that can be a string
 	fmt.Scan(&i, &unit)
 
+	lowercaseUnit := strings.ToLower(unit)
+
 	// convert F to C with switch
-	switch unit {
+	switch lowercaseUnit {
 	case "f":
 		c := (i - 32) * 5 / 9
 		fmt.Println(i, "degrees fahrenheit is equal to", roundToOne(c), "degrees celsisus.")
@@ -35,6 +38,7 @@ func main() {
 // ask the user for a number and a unit (C or F) // done
 // convert and print the result with one decimal place // done
 // reject unknown units // done
+// convert user input to lowercase // done
 // keep converting until the user types 'q'
 // extra: add Kelvin
 // DoD: when it can handle bad input without crashing

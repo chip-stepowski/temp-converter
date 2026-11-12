@@ -32,9 +32,9 @@ func main() {
 
 }
 
-// ask the user for a number and a unit (C or F)
-// convert and print the result with one decimal place
-// reject unknown units
+// ask the user for a number and a unit (C or F) // done
+// convert and print the result with one decimal place // done
+// reject unknown units // done
 // keep converting until the user types 'q'
 // extra: add Kelvin
 // DoD: when it can handle bad input without crashing

@@ -2,7 +2,7 @@
 
 ## A simple temperature converter written in Go.
 
-Calculates F to C, as well as C to F.
+Calculates Fahrenheit to Celsius, Celsius to Fahrenheit, and Kelvin to both Fahrenheit and Celsius!
 
 Loops until the user quits.
 

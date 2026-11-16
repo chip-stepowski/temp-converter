@@ -50,7 +50,7 @@ func main() {
 
 		// make sure numberPart is a number
 		if err != nil {
-			fmt.Println("Please enter a valid number.")
+			fmt.Println("Please enter a valid value.")
 			continue
 		}
 

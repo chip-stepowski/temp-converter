@@ -15,4 +15,4 @@ Loops until the user quits.
 | Convert user input to lowercase | Done |
 | Keep converting until the user types 'q' | Done |
 | Add Kelvin | Done |
-| DoD: when it can handle bad input without crashing | Not Started |
+| DoD: when it can handle bad input without crashing | Done |

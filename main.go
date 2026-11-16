@@ -20,7 +20,7 @@ func main() {
 
 	// add loop so the user can continue entering conversions until q is pressed
 	for {
-		fmt.Print("Enter a temperature and a unit of measurement (c or f) or 'q' to quit: ")
+		fmt.Print("Enter a temperature and a unit of measurement (c, f, or k) or 'q' to quit: ")
 
 		// read the users input until a newline (Enter). it keeps the newline. _ is used to omit the error value, as we don't need it
 		line, _ := reader.ReadString('\n')
@@ -62,6 +62,11 @@ func main() {
 		case "c":
 			f := i*9/5 + 32
 			fmt.Println(i, "degrees celsius is equal to", roundToOne(f), "degrees fahrenheit.")
+		case "k":
+			f := (i-273.15)*9/5 + 32
+			c := i - 273.15
+			fmt.Println(i, "degrees Kelvin is equal to", roundToOne(f), "degrees fahrenheit and ", roundToOne(c), "degress celsius.")
+
 		default:
 			fmt.Println("Please enter a valid unit of measurement.")
 		}
